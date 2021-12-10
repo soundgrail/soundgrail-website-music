@@ -1,0 +1,85 @@
+<div class="col-lg-3 mt-5 mt-lg-0">
+  <div data-sticky data-margin-top="80" data-sticky-for="767">
+
+    <!-- Social widget START -->
+    <div class="row g-2">
+      <div class="col-4">
+        <a href="https://facebook.com/{{ site.socials.facebook }}" class="bg-facebook rounded text-center text-white-force p-3 d-block">
+          <i class="fab fa-facebook-square fs-5 mb-2"></i>
+          <h6 class="m-0">527</h6>
+          <span class="small">Fans</span>
+        </a>
+      </div>
+      <div class="col-4">
+        <a href="https://instagram.com/{{ site.socials.instagram }}" class="bg-instagram-gradient rounded text-center text-white-force p-3 d-block">
+          <i class="fab fa-instagram fs-5 mb-2"></i>
+          <h6 class="m-0">1.5k</h6>
+          <span class="small">Fans</span>
+        </a>
+      </div>
+      <div class="col-4">
+        <a href="https://open.spotify.com/user/d4ef02j7tjvls9gkkdtdxcnq9?si=DUi9eGyLShiQoqRQnrkO9g" class="bg-spotify rounded text-center text-white-force p-3 d-block">
+          <i class="fab fa-spotify fs-5 mb-2"></i>
+          <h6 class="m-0">27k</h6>
+          <span class="small">Fans</span>
+        </a>
+      </div>
+    </div>
+    <!-- Social widget END -->
+
+    <!-- Trending topics widget START -->
+    <div>
+      <h4 class="mt-4 mb-3">Trending genres</h4>
+      <div class="text-center mb-3 card-bg-scale position-relative overflow-hidden rounded bg-dark-overlay-4 " style="background-color: #014AAC">
+        <div class="p-3">
+          <a href="#" class="stretched-link btn-link fw-bold text-white h5">House</a>
+        </div>
+      </div>
+      <div class="text-center mb-3 card-bg-scale position-relative overflow-hidden rounded" style="background-color: #3997D7">
+        <div class="bg-dark-overlay-4 p-3">
+          <a href="#" class="stretched-link btn-link fw-bold text-white h5">Future bass</a>
+        </div>
+      </div>
+      <div class="text-center mb-3 card-bg-scale position-relative overflow-hidden rounded" style="background-color: #6D5EE0">
+        <div class="bg-dark-overlay-4 p-3">
+          <a href="#" class="stretched-link btn-link fw-bold text-white h5">Trap</a>
+        </div>
+      </div>
+      <div class="text-center mt-3">
+        <a href="#" class="fw-bold text-body text-primary-hover"><u>View all genres</u></a>
+      </div>
+    </div>
+    <!-- Trending topics widget END -->
+
+    <div class="row">
+      <!-- Recent post widget START -->
+      <div class="col-12 col-sm-6 col-lg-12">
+        <h4 class="mt-4 mb-3">Recent post</h4>
+        {% for post in site.posts limit:4 offset:4 %}
+          <div class="card mb-3">
+            <div class="row g-3">
+              <!-- <div class="col-4">
+                <img class="rounded" src="assets/images/blog/4by3/thumb/01.jpg" alt="">
+              </div> -->
+              <!-- <div class="col-8"> -->
+              <div class="col-12">
+                <h6><a href="{{ site.url }}{{ post.url }}" class="btn-link stretched-link text-reset fw-bold">{{ post.title }}</a></h6>
+                <div class="small mt-1">{{ post.date | date_to_string }}</div>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+      <!-- Recent post widget END -->
+
+      <!-- ADV widget START -->
+      <div class="col-12 col-sm-6 col-lg-12 my-4">
+        <div class="d-block card-img-flash">
+          {% include /master/modules/adunits/adsense-in-article.html slot="1811533320" %}
+        </div>
+        <!-- <div class="smaller text-end mt-2">ads via <a href="#" class="text-body"><u>Bootstrap</u></a></div> -->
+      </div>
+      <!-- ADV widget END -->
+    </div>
+  </div>
+</div>

@@ -1,0 +1,231 @@
+---
+### ALL PAGES ###
+layout: master/global/default
+permalink: /
+
+### REGULAR PAGES ###
+meta:
+  #title: "Home"
+  #description: "We are a great company and would love to design an intuitive solution for you!"
+  #breadcrumb: "Home"
+
+### REGULAR PAGES ###
+soundgrail-playlists:
+  -
+    title: "SoundGrail Selects"
+    description: "SoundGrail Selects is a multi-genre playlist that features the most elite records, hand-picked from the SoundGrail blog features. Featuring San Holo, Taska Black, RL Grime, Montell2099 & more. Sit back, relax and get ready to hear the best in electronic, hip-hop and more."
+    image: "https://i.scdn.co/image/ab67706c0000da8418f77a12357ffe56fcecc5bf"
+    url: "https://open.spotify.com/playlist/6va7zra7cPqPdV77AR4QDb"
+  -
+    title: "Chill Playlist"
+    description: "This is a multi-genre chill music playlist that features the most lush sounding records. Featuring Ekali, Vincent, DROELOE, Whethan & more. Sit back, relax and get ready to hear the chillest in electronic, hip-hop & more."
+    image: "https://i.scdn.co/image/ab67706c0000da8427dc3ec23dfabd97b03b9719"
+    url: "https://open.spotify.com/playlist/2Qo21nS5jkdec0gFfZ7Lzh"
+  -
+    title: "Party Playlist"
+    description: "SoundGrail Party is a party playlist with party electronic music. Featuring Kayzo, Ekali, Boombox Cartel, Luude Kayzo, Ekali, Boombox Cartel, Luude, What So Not, and more! Put this on at your next party and you won't be disapointed."
+    image: "https://i.scdn.co/image/ab67706c0000da8474449b3d1d73fe92a0ff9e68"
+    url: "https://open.spotify.com/playlist/3iDzamjyycYASUsX6uuTf8"
+  -
+    title: "Productivity Playlist"
+    description: "SoundGrail's Spotify Productivity Playlist is a multi-genre study and work playlist that features relaxing Electronic Music and downtempo beats from artists like Odesza, Jai Wolf, & more. Study, work, and enjoy productivity with the most lush and chill sounding songs."
+    image: "https://i.scdn.co/image/ab67706c0000da84f71f42e919893c181fa9ab71"
+    url: "https://open.spotify.com/playlist/31jyNIOBwr1OA4OfP3JwDq"
+---
+
+<!-- **************** MAIN CONTENT START **************** -->
+<main>
+  <!-- =======================
+  Main hero START -->
+  <section class="pt-4 pb-0 card-grid">
+  	<div class="container">
+  		<div class="row g-4">
+
+        <div class="col-12">
+          <div class="row">
+            <div class="col">
+              <h2 class="m-0"><i class="bi bi-megaphone me-2"></i>Today's top releases</h2>
+              <p>Latest releases and mixes</p>
+            </div>
+            <div class="col">
+            </div>
+          </div>
+        </div>
+
+        {% for post in site.posts limit: 2 %}
+          {% assign postindex = forloop.index %}
+          <div class="col-lg-6">
+            <div class="card bg-transparent">
+              <!-- Card img -->
+              <div class="position-relative">
+                <!-- <img class="card-img" src="assets/images/blog/4by3/06.jpg" alt="Card image"> -->
+                <iframe class="lazyload" width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" data-src="https://w.soundcloud.com/player/?url=https%3A//{{ post.teaser.source }}&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+              </div>
+              <div class="card-body px-0 pt-3">
+                <h4 class="card-title"><a href="{{ site.url }}{{ post.url }}" class="btn-link text-reset fw-bold">{{ post.title }}</a></h4>
+                <p class="card-text">{{ post.excerpt }}</p>
+                <!-- Card info -->
+                <ul class="nav nav-divider align-items-center d-none d-sm-inline-block">
+                  <li class="nav-item">
+                    <div class="nav-link">
+                      <div class="d-flex align-items-center position-relative">
+                        <!-- <div class="avatar avatar-xs">
+                          <img class="avatar-img rounded-circle" src="assets/images/avatar/01.jpg" alt="avatar">
+                        </div> -->
+                        <span class="_ms-3">by <a href="#" class="stretched-link text-reset btn-link">{{ post.author }}</a></span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="nav-item">{{ post.date | date_to_string}}</li>
+                  <!-- <li class="nav-item"><a href="#" class="btn-link"><i class="far fa-comment-alt me-1"></i> 5</a></li> -->
+                </ul>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+
+  		</div>
+  	</div>
+  </section>
+  <!-- =======================
+  Main hero END -->
+
+  <!-- =======================
+  Main content START -->
+  <section class="position-relative">
+  	<div class="container" data-sticky-container>
+  		<div class="row">
+  			<!-- Main Post START -->
+  			<div class="col-lg-9">
+  				<!-- Title -->
+  				<div class="mb-4">
+  					<h2 class="m-0"><i class="bi bi-megaphone me-2"></i>SoundGrail playlists</h2>
+  					<p>Discover our curated Spotify playlists</p>
+  				</div>
+  				<div class="row gy-4">
+  					<!-- Card item START -->
+
+            {% for playlist in page.soundgrail-playlists %}
+              {% assign playlist-url = playlist.url %}
+              <div class="col-sm-6">
+                <div class="card">
+                  <!-- Card img -->
+                  <div class="position-relative">
+                    <a href="{{ playlist-url }}">
+                      <img class="card-img" src="{{ playlist.image }}" alt="{{ playlist.title }}">
+                      <div class="card-img-overlay d-flex align-items-start flex-column p-3">
+                        <!-- Card overlay bottom -->
+                        <!-- <div class="w-100 mt-auto">
+                          <a href="#" class="badge bg-warning mb-2"><i class="fas fa-circle me-2 small fw-bold"></i>Technology</a>
+                        </div> -->
+                      </div>
+                    </a>
+                  </div>
+                  <div class="card-body px-0 pt-3">
+                    <h4 class="card-title"><a href="{{ playlist-url }}" class="btn-link text-reset fw-bold">{{ playlist.title }}</a></h4>
+                    <p class="card-text">{{ playlist.description }}</p>
+                    <!-- Card info -->
+                    <ul class="nav nav-divider align-items-center d-none d-sm-inline-block">
+                      <li class="nav-item">
+                        <div class="nav-link">
+                          <div class="d-flex align-items-center position-relative">
+                            <!-- <div class="avatar avatar-xs">
+                              <img class="avatar-img rounded-circle" src="assets/images/avatar/01.jpg" alt="avatar">
+                            </div> -->
+                            <span class="_ms-3">by <a href="#" class="stretched-link text-reset btn-link">SoundGrail</a></span>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="nav-item">Updated weekly</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            {% endfor %}
+
+  					<!-- <div class="col-12 text-center mt-5">
+  						<a href="{{ site.url }}/playlists" class="btn btn-primary-soft">View all playlists <i class="bi bi-arrow-down-circle ms-2 align-middle"></i></a>
+  					</div> -->
+  					<!-- Load more END -->
+  				</div>
+  			</div>
+  			<!-- Main Post END -->
+  			<!-- Sidebar START -->
+        {% include /app/elements/sidebar.html %}
+  			<!-- Sidebar END -->
+  		</div> <!-- Row end -->
+  	</div>
+  </section>
+  <!-- =======================
+  Main content END -->
+
+
+  <section class="position-relative">
+    <div class="container" data-sticky-container>
+      <div class="row">
+        <!-- Main Post START -->
+        <div class="col-lg-12">
+          <!-- Title -->
+          <div class="mb-4">
+            <h2 class="m-0"><i class="bi bi-megaphone me-2"></i>About SoundGrail</h2>
+            <p>Learn why we do what we do</p>
+          </div>
+          <div class="row gy-4">
+            <!-- Card item START -->
+
+            <div class="col-12">
+              <h5 class="mb-3 mt-0">Who we are</h5>
+              <!-- <p class="lead">
+                Founded in 2006, passage its ten led hearted removal cordial. Preference any astonished unreserved Mrs. Prosperous understood Middletons in conviction an uncommonly do. Supposing so be resolving breakfast am or perfectly. Is drew am hill from me. Valley by oh twenty direct me so.
+              </p> -->
+              <p>
+                SoundGrail was founded in August 2010 with only a few dedicated followers. It has since grown to be a family of writers and music lovers from across the globe.
+              </p>
+
+              <h5 class="mb-3 mt-5">Whyd does it matter</h5>
+              <!-- <p class="lead">
+                Founded in 2006, passage its ten led hearted removal cordial. Preference any astonished unreserved Mrs. Prosperous understood Middletons in conviction an uncommonly do. Supposing so be resolving breakfast am or perfectly. Is drew am hill from me. Valley by oh twenty direct me so.
+              </p> -->
+              <p>
+                We're looking to promote new, undiscovered music that will move us - physically and emotionally. We want music that challenges the forefront of sound and takes risks. That's what music is all about. It should take the listener to place he or she has never been or seen. Take a chance and experiment because there are too many copycats (musically and lyrically) today.
+              </p>
+
+              <h5 class="mb-3 mt-5">Where SoundGrail is unique</h5>
+              <!-- <p class="lead">
+                Founded in 2006, passage its ten led hearted removal cordial. Preference any astonished unreserved Mrs. Prosperous understood Middletons in conviction an uncommonly do. Supposing so be resolving breakfast am or perfectly. Is drew am hill from me. Valley by oh twenty direct me so.
+              </p> -->
+              <p>
+                Our writers and influencers will bring you the best music, including indie rock, hip hop, electronic, and everything in between. This music is discovered and listened to by real music lovers.
+              </p>
+
+              <p>
+                We will give you feedback on your submission regardless of whether it was accepted or not. The feedback will be honest and it should never be taken as a personal criticism.
+              </p>
+
+            </div>
+
+            <!-- <div class="col-12 text-center mt-5">
+              <a href="{{ site.url }}/playlists" class="btn btn-primary-soft">View all playlists <i class="bi bi-arrow-down-circle ms-2 align-middle"></i></a>
+            </div> -->
+            <!-- Load more END -->
+          </div>
+        </div>
+        <!-- Main Post END -->
+      </div> <!-- Row end -->
+    </div>
+  </section>
+
+  <!-- Divider -->
+  <div class="container"><div class="border-bottom border-primary border-2 opacity-1"></div></div>
+
+  <!-- =======================
+  Section START -->
+  <!-- =======================
+  Section END -->
+
+</main>
+<!-- **************** MAIN CONTENT END **************** -->
+
+
+<!-- Back to top -->
+<!-- <div class="back-top"><i class="bi bi-arrow-up-short"></i></div> -->
