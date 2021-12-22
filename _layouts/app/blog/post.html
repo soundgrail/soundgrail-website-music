@@ -1,217 +1,195 @@
 ---
 layout: master/global/default
-meta:
-  title: "{{ page.post.title }}"
-  description: "{{ page.post.excerpt }}"
-  breadcrumb: "{{ page.post.title }}"
 ---
 <main>
-<!-- Divider -->
-<div class="border-bottom border-primary border-1 opacity-1"></div>
+  <!-- Divider -->
+  <div class="border-bottom border-primary border-1 opacity-1"></div>
 
-<!-- =======================
-Inner intro START -->
-<section class="pb-3 pb-lg-5">
-	<div class="container">
-		<div class="row">
-			<div class="col-12">
-        <a href="#" class="badge bg-danger mb-2"><i class="fas fa-circle me-2 small fw-bold"></i>{{ page.genre }}</a>
-				<h1>{{ page.title }}</h1>
-			</div>
-			 <p class="lead">{{ page.excerpt }}</p>
-		</div>
-	</div>
-</section>
-<!-- =======================
-Inner intro END -->
+  <!-- =======================
+  Inner intro START -->
+  <section class="pb-3 pb-lg-5">
+  	<div class="container">
+  		<div class="row">
+  			<div class="col-12">
+          <a href="#" class="badge bg-danger mb-2"><i class="fas fa-circle me-2 small fw-bold"></i>{{ page.genre }}</a>
+  				<h1>{{ page.title }}</h1>
+  			</div>
+  			 <p class="lead">{{ page.excerpt }}</p>
+  		</div>
+  	</div>
+  </section>
+  <!-- =======================
+  Inner intro END -->
 
-<!-- =======================
-Main START -->
-<section class="pt-0">
-	<div class="container position-relative" data-sticky-container="">
-		<div class="row">
-			<div class="col-lg-2">
-				<!-- <div class="text-start text-lg-center mb-5" data-sticky="" data-margin-top="80" data-sticky-for="991">
-					<div class="position-relative">
-						<div class="avatar avatar-xl">
-							<img class="avatar-img rounded-circle" src="assets/images/avatar/03.jpg" alt="avatar">
-						</div>
-						<a href="#" class="h5 stretched-link mt-2 mb-0 d-block">Louis Ferguson</a>
-						<p>An editor at Blogzine</p>
-					</div>
-					<hr class="d-none d-lg-block">
-					<ul class="list-inline list-unstyled">
-						<li class="list-inline-item d-lg-block my-lg-2">Nov 15, 2021</li>
-						<li class="list-inline-item d-lg-block my-lg-2">5 min read</li>
-						<li class="list-inline-item d-lg-block my-lg-2"><a href="#" class="text-body"><i class="far fa-heart me-1"></i></a> 266</li>
-						<li class="list-inline-item d-lg-block my-lg-2"><i class="far fa-eye me-1"></i> 2344 Views</li>
-					</ul>
-					<ul class="list-inline text-primary-hover mt-0 mt-lg-3">
-					  <li class="list-inline-item">
-					  	<a class="text-body" href="#">#agency</a>
-					  </li>
-					  <li class="list-inline-item">
-					  	<a class="text-body" href="#">#business</a>
-					  </li>
-					  <li class="list-inline-item">
-					  	<a class="text-body" href="#">#theme</a>
-					  </li>
-					  <li class="list-inline-item">
-					  	<a class="text-body" href="#">#bootstrap</a>
-					  </li>
-					  <li class="list-inline-item">
-					  	<a class="text-body" href="#">#marketing</a>
-					  </li>
-					</ul>
-				</div> -->
-			</div>
-			<!-- Left sidebar END -->
-			<!-- Main Content START -->
-			<div class="col-lg-7 mb-5">
+  <!-- =======================
+  Main START -->
+  <section class="pt-0">
+  	<div class="container position-relative" data-sticky-container="">
+  		<div class="row">
+  			<div class="col-lg-2">
+  				<!-- <div class="text-start text-lg-center mb-5" data-sticky="" data-margin-top="80" data-sticky-for="991">
+  					<div class="position-relative">
+  						<div class="avatar avatar-xl">
+  							<img class="avatar-img rounded-circle" src="assets/images/avatar/03.jpg" alt="avatar">
+  						</div>
+  						<a href="#" class="h5 stretched-link mt-2 mb-0 d-block">Louis Ferguson</a>
+  						<p>An editor at Blogzine</p>
+  					</div>
+  					<hr class="d-none d-lg-block">
+  					<ul class="list-inline list-unstyled">
+  						<li class="list-inline-item d-lg-block my-lg-2">Nov 15, 2021</li>
+  						<li class="list-inline-item d-lg-block my-lg-2">5 min read</li>
+  						<li class="list-inline-item d-lg-block my-lg-2"><a href="#" class="text-body"><i class="far fa-heart me-1"></i></a> 266</li>
+  						<li class="list-inline-item d-lg-block my-lg-2"><i class="far fa-eye me-1"></i> 2344 Views</li>
+  					</ul>
+  					<ul class="list-inline text-primary-hover mt-0 mt-lg-3">
+  					  <li class="list-inline-item">
+  					  	<a class="text-body" href="#">#agency</a>
+  					  </li>
+  					  <li class="list-inline-item">
+  					  	<a class="text-body" href="#">#business</a>
+  					  </li>
+  					  <li class="list-inline-item">
+  					  	<a class="text-body" href="#">#theme</a>
+  					  </li>
+  					  <li class="list-inline-item">
+  					  	<a class="text-body" href="#">#bootstrap</a>
+  					  </li>
+  					  <li class="list-inline-item">
+  					  	<a class="text-body" href="#">#marketing</a>
+  					  </li>
+  					</ul>
+  				</div> -->
+  			</div>
+  			<!-- Left sidebar END -->
+  			<!-- Main Content START -->
+  			<div class="col-lg-7 mb-5">
 
-        <div class="row">
-          <div class="col-12">
-            <div class="mb-5">
-              {{ content }}
-            </div>
-            <div class="mb-5">
-              <iframe class="lazyload" width="100%" height="100%" scrolling="no" frameborder="no" allow="autoplay" data-src="https://w.soundcloud.com/player/?url=https%3A//{{ page.teaser.source }}&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+          <div class="row">
+            <div class="col-12">
+              <div class="mb-5">
+                {{ content }}
+              </div>
+              <div class="mb-5">
+                <iframe class="lazyload" width="100%" height="100%" scrolling="no" frameborder="no" allow="autoplay" data-src="https://w.soundcloud.com/player/?url=https%3A//{{ page.teaser.source }}&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+              </div>
             </div>
           </div>
-        </div>
 
-				<div class="row g-0">
+  				<div class="row g-0">
 
-          {% if page.next.url %}
-          <div class="col-sm-{% if page.previous.url %}6{% else %}12{% endif %} bg-primary-soft p-4 position-relative border-end border-1 rounded-start">
-            <span><i class="bi bi-arrow-left me-3 rtl-flip"></i>Previous post</span>
-            <h5 class="m-0"><a href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" class="stretched-link btn-link text-reset">{{ page.next.title }}</a></h5>
-          </div>
-          {% endif %}
-          {% if page.previous.url %}
-          <div class="col-sm-{% if page.next.url %}6{% else %}12{% endif %} bg-primary-soft p-4 position-relative text-sm-end rounded-end">
-						<span>Next post<i class="bi bi-arrow-right ms-3 rtl-flip"></i></span>
-						<h5 class="m-0"><a href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" class="stretched-link btn-link text-reset">{{ page.previous.title }}</a></h5>
-					</div>
-          {% endif %}
-
+            {% if page.next.url %}
+            <div class="col-sm-{% if page.previous.url %}6{% else %}12{% endif %} bg-primary-soft p-4 position-relative border-end border-1 rounded-start">
+              <span><i class="bi bi-arrow-left me-3 rtl-flip"></i>Previous post</span>
+              <h5 class="m-0"><a href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" class="stretched-link btn-link text-reset">{{ page.next.title }}</a></h5>
+            </div>
+            {% endif %}
+            {% if page.previous.url %}
+            <div class="col-sm-{% if page.next.url %}6{% else %}12{% endif %} bg-primary-soft p-4 position-relative text-sm-end rounded-end">
+  						<span>Next post<i class="bi bi-arrow-right ms-3 rtl-flip"></i></span>
+  						<h5 class="m-0"><a href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" class="stretched-link btn-link text-reset">{{ page.previous.title }}</a></h5>
+  					</div>
+            {% endif %}
 
 
 
-				</div>
+
+  				</div>
 
 
-				<!-- Divider -->
-				<hr>
+  				<!-- Divider -->
+  				<hr>
 
-				<!-- Author info START -->
-				<!-- <div class="d-flex py-4">
-					<a href="#">
-						<div class="avatar avatar-xxl me-4">
-							<img class="avatar-img rounded-circle" src="assets/images/avatar/03.jpg" alt="avatar">
-						</div>
-					</a>
-					<div>
-						<div class="d-sm-flex align-items-center justify-content-between">
-							<div>
-								<h4 class="m-0"><a href="#" class="text-reset">Louis Ferguson</a></h4>
-								<small>An editor at Blogzine</small>
-							</div>
-							<a href="#" class="btn btn-xs btn-primary-soft">View Articles</a>
-						</div>
-						<p class="my-2">Louis Ferguson is a senior editor for the blogzine and also reports on breaking news based in London. He has written about government, criminal justice, and the role of money in politics since 2015.</p>
-						<ul class="nav">
-							<li class="nav-item">
-								<a class="nav-link ps-0 pe-2 fs-5" href="#"><i class="fab fa-facebook-square"></i></a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link px-2 fs-5" href="#"><i class="fab fa-twitter-square"></i></a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link px-2 fs-5" href="#"><i class="fab fa-linkedin"></i></a>
-							</li>
-						</ul>
-					</div>
-				</div> -->
-				<!-- Author info END -->
+  				<!-- Author info START -->
+  				<!-- <div class="d-flex py-4">
+  					<a href="#">
+  						<div class="avatar avatar-xxl me-4">
+  							<img class="avatar-img rounded-circle" src="assets/images/avatar/03.jpg" alt="avatar">
+  						</div>
+  					</a>
+  					<div>
+  						<div class="d-sm-flex align-items-center justify-content-between">
+  							<div>
+  								<h4 class="m-0"><a href="#" class="text-reset">Louis Ferguson</a></h4>
+  								<small>An editor at Blogzine</small>
+  							</div>
+  							<a href="#" class="btn btn-xs btn-primary-soft">View Articles</a>
+  						</div>
+  						<p class="my-2">Louis Ferguson is a senior editor for the blogzine and also reports on breaking news based in London. He has written about government, criminal justice, and the role of money in politics since 2015.</p>
+  						<ul class="nav">
+  							<li class="nav-item">
+  								<a class="nav-link ps-0 pe-2 fs-5" href="#"><i class="fab fa-facebook-square"></i></a>
+  							</li>
+  							<li class="nav-item">
+  								<a class="nav-link px-2 fs-5" href="#"><i class="fab fa-twitter-square"></i></a>
+  							</li>
+  							<li class="nav-item">
+  								<a class="nav-link px-2 fs-5" href="#"><i class="fab fa-linkedin"></i></a>
+  							</li>
+  						</ul>
+  					</div>
+  				</div> -->
+  				<!-- Author info END -->
 
-				<!-- Divider -->
-				<!-- <hr> -->
+  				<!-- Divider -->
+  				<!-- <hr> -->
 
-				<!-- Comments START -->
-				<div>
-					<h3>Comments</h3>
-					<!-- Comment level 1-->
-			   <!-- COMMENTS -->
-         {% include master/modules/disqus-comments.html %}
-				</div>
-				<!-- Comments END -->
-			</div>
-			<!-- Main Content END -->
+  				<!-- Comments START -->
+  				<div>
+  					<h3>Comments</h3>
+  					<!-- Comment level 1-->
+  			   <!-- COMMENTS -->
+           {% include master/modules/disqus-comments.html %}
+  				</div>
+  				<!-- Comments END -->
+  			</div>
+  			<!-- Main Content END -->
 
-			<!-- Right sidebar START -->
-			<div class="col-lg-3">
-				<div data-sticky="" data-margin-top="80" data-sticky-for="991">
-	      	<h4>Share this article</h4>
-          {% include master/modules/social-share-kit.html count=false %}
-					<!-- <ul class="nav text-white-force">
-						<li class="nav-item">
-							<a class="nav-link icon-md rounded-circle me-2 mb-2 p-0 fs-5 bg-facebook" href="#">
-								<i class="fab fa-facebook-square align-middle"></i>
-							</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link icon-md rounded-circle me-2 mb-2 p-0 fs-5 bg-twitter" href="#">
-								<i class="fab fa-twitter-square align-middle"></i>
-							</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link icon-md rounded-circle me-2 mb-2 p-0 fs-5 bg-linkedin" href="#">
-								<i class="fab fa-linkedin align-middle"></i>
-							</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link icon-md rounded-circle me-2 mb-2 p-0 fs-5 bg-pinterest" href="#">
-								<i class="fab fa-pinterest align-middle"></i>
-							</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link icon-md rounded-circle me-2 mb-2 p-0 fs-5 bg-primary" href="#">
-								<i class="far fa-envelope align-middle"></i>
-							</a>
-						</li>
-					</ul> -->
-					<!-- Advertisement -->
-					<div class="mt-4">
-						<a href="#" class="d-block card-img-flash">
-							<img src="assets/images/adv.png" alt="">
-						</a>
-					</div>
-				</div>
-			</div>
-			<!-- Right sidebar END -->
-		</div>
-	</div>
-</section>
-<!-- =======================
-Main END -->
-
-<!-- =======================
-Sticky post START -->
-<div class="sticky-post bg-light border p-4 mb-5 text-sm-end rounded d-none d-xxl-block">
-  <div class="d-flex align-items-center">
-    <!-- Title -->
-    <div class="me-3">
-      <span>Next post<i class="bi bi-arrow-right ms-3 rtl-flip"></i></span>
-      <h6 class="m-0"> <a href="javascript:void(0)" class="stretched-link btn-link text-reset">Bad habits that people in the industry need to quit</a></h6>
-    </div>
-    <!-- image -->
-    <div class="col-4 d-none d-md-block">
-      <img src="assets/images/blog/4by3/05.jpg" alt="Image">
-    </div>
-  </div>
-</div>
-<!-- =======================
-Sticky post END -->
+  			<!-- Right sidebar START -->
+  			<div class="col-lg-3">
+  				<div data-sticky="" data-margin-top="80" data-sticky-for="991">
+  	      	<h4>Share this article</h4>
+            {% include master/modules/social-share-kit.html count=false %}
+  					<!-- <ul class="nav text-white-force">
+  						<li class="nav-item">
+  							<a class="nav-link icon-md rounded-circle me-2 mb-2 p-0 fs-5 bg-facebook" href="#">
+  								<i class="fab fa-facebook-square align-middle"></i>
+  							</a>
+  						</li>
+  						<li class="nav-item">
+  							<a class="nav-link icon-md rounded-circle me-2 mb-2 p-0 fs-5 bg-twitter" href="#">
+  								<i class="fab fa-twitter-square align-middle"></i>
+  							</a>
+  						</li>
+  						<li class="nav-item">
+  							<a class="nav-link icon-md rounded-circle me-2 mb-2 p-0 fs-5 bg-linkedin" href="#">
+  								<i class="fab fa-linkedin align-middle"></i>
+  							</a>
+  						</li>
+  						<li class="nav-item">
+  							<a class="nav-link icon-md rounded-circle me-2 mb-2 p-0 fs-5 bg-pinterest" href="#">
+  								<i class="fab fa-pinterest align-middle"></i>
+  							</a>
+  						</li>
+  						<li class="nav-item">
+  							<a class="nav-link icon-md rounded-circle me-2 mb-2 p-0 fs-5 bg-primary" href="#">
+  								<i class="far fa-envelope align-middle"></i>
+  							</a>
+  						</li>
+  					</ul> -->
+  					<!-- Advertisement -->
+  					<div class="mt-4">
+  						<a href="#" class="d-block card-img-flash">
+  							<img src="assets/images/adv.png" alt="">
+  						</a>
+  					</div>
+  				</div>
+  			</div>
+  			<!-- Right sidebar END -->
+  		</div>
+  	</div>
+  </section>
+  <!-- =======================
+  Main END -->
 
 </main>

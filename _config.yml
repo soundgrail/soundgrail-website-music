@@ -22,8 +22,8 @@ baseurl: "" # the subpath of your site, e.g. /blog
 version: '1.0.0'
 app: 'soundgrail'
 meta:
-  title: "Music Theory App - Learn Music Theory Online Free - SoundGrail"
-  description: "SoundGrail is a free music theory app for pianists, guitarists and DJs. Learn chords, scales, key signatures, and more. Play guitar, piano and DJ like a pro!"
+  title: "Electronic Music Blog - Discover New Songs And Playlists - SoundGrail"
+  description: "SoundGrail is a music blog that helps you discover new music and playlists. We support electronic, edm & hip-hop music! Independent music news, reviews, features, interviews and videos."
   og-image: "https://cdn.itwcreativeworks.com/assets/soundgrail/images/logo/soundgrail-brandmark-black-3000x3000.png"
   keywords: "" # false or blank to disable, comma separated kws
   viewport: "" # string, leave blank to use default
